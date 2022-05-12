@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <row>
+        <parent_code>000</parent_code>
+        <parent_name>Select Testing Point</parent_name>
+    </row>
+    <row>
+    <parent_code>community</parent_code>
+    <parent_name>Community</parent_name>
+</row>
+    <row>
+        <parent_code>facility</parent_code>
+        <parent_name>Facility</parent_name>
+    </row>
+</root>

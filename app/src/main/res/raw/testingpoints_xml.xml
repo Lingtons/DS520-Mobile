@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <row>
+        <tp_code>community</tp_code>
+        <parent_code>community</parent_code>
+        <tp_name>Community</tp_name>
+    </row>
+    <row>
+        <tp_code>fp</tp_code>
+        <parent_code>facility</parent_code>
+        <tp_name>FP</tp_name>
+    </row>
+    <row>
+        <tp_code>opd</tp_code>
+        <parent_code>facility</parent_code>
+        <tp_name>OPD</tp_name>
+    </row>
+    <row>
+        <tp_code>outreach_program</tp_code>
+        <parent_code>facility</parent_code>
+        <tp_name>Outreach Program</tp_name>
+    </row>
+
+    <row>
+        <tp_code>standalone_hts</tp_code>
+        <parent_code>facility</parent_code>
+        <tp_name>Standalone HTS</tp_name>
+    </row>
+    <row>
+        <tp_code>sti</tp_code>
+        <parent_code>facility</parent_code>
+        <tp_name>STI</tp_name>
+    </row>
+    <row>
+        <tp_code>tb</tp_code>
+        <parent_code>facility</parent_code>
+        <tp_name>TB Clinics</tp_name>
+    </row>
+    <row>
+        <tp_code>ward</tp_code>
+        <parent_code>facility</parent_code>
+        <tp_name>Ward</tp_name>
+    </row>
+    <row>
+        <tp_code>vct</tp_code>
+        <parent_code>facility</parent_code>
+        <tp_name>VCT</tp_name>
+    </row>
+
+    <row>
+        <tp_code>others</tp_code>
+        <parent_code>facility</parent_code>
+        <tp_name>Others</tp_name>
+    </row>
+
+</root>
+
+
+
+
+
+
+
+
+
+
+

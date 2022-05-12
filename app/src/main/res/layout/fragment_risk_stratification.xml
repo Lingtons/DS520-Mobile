@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.RiskStratificationFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <com.satsuware.usefulviews.LabelledSpinner
+                    android:id="@+id/rst_agegroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/AppTheme"
+                    app:labelText="Select Age Group"
+                    app:widgetColor="@color/colorAccent" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.satsuware.usefulviews.LabelledSpinner
+                    android:id="@+id/referral_client_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/AppTheme"
+                    app:labelText="State of Residence"
+                    app:widgetColor="@color/colorAccent" />
+
+                <com.satsuware.usefulviews.LabelledSpinner
+                    android:id="@+id/referral_client_lga"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/AppTheme"
+                    app:labelText="LGA of Residence"
+                    app:widgetColor="@color/colorAccent" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.satsuware.usefulviews.LabelledSpinner
+                    android:id="@+id/testing_point_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/AppTheme"
+                    app:labelText="Testing Area"
+                    app:widgetColor="@color/colorAccent" />
+
+                <com.satsuware.usefulviews.LabelledSpinner
+                    android:id="@+id/testing_point"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/AppTheme"
+                    app:labelText="Testing Point"
+                    app:widgetColor="@color/colorAccent" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_map_pin"
+                    android:id="@+id/btnLocation"
+
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/referral_client_geo_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Click button for geocode"
+                        android:inputType="textVisiblePassword"
+                        android:enabled="false"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rstPediatric"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/rst_pediatric_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:padding="5dp"
+                        android:text="Pediatric &amp; Adolescent  Risk Stratification"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <FrameLayout
+                        android:id="@+id/rst_pediatric_icon_up"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/rst_pediatric_icon_down"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:padding="1dp">
+
+                </FrameLayout>
+
+                <TableLayout
+                    android:id="@+id/rst_pediatric"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
+                    android:background="@color/colorAccent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/textViewRst35"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/whiteTextColor"
+                            android:gravity="center_vertical"
+                            android:paddingStart="3dp"
+                            android:paddingLeft="3dp"
+                            android:text="Is child mother HIV+ or any family member deceased of unknown or undisclosed illness" />
+
+                        <RadioGroup
+                            android:id="@+id/rst_ped_mother_positive_or_member_deceased"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:background="@color/whiteTextColor"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <RadioButton
+                                android:id="@+id/rst_ped_mother_positive_or_member_deceased_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Yes" />
+
+                            <RadioButton
+                                android:id="@+id/rst_ped_mother_positive_or_member_deceased_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="No" />
+                        </RadioGroup>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/textView24"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/whiteTextColor"
+                            android:gravity="center_vertical"
+                            android:paddingStart="3dp"
+                            android:paddingLeft="3dp"
+                            android:text="Has the child ever been tested for HIV ?" />
+
+                        <RadioGroup
+                            android:id="@+id/rst_ped_child_ever_tested_for_hiv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:background="@color/whiteTextColor"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <RadioButton
+                                android:id="@+id/rst_ped_child_ever_tested_for_hiv_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Yes" />
+
+                            <RadioButton
+                                android:id="@+id/rst_ped_child_ever_tested_for_hiv_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="No" />
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/whiteTextColor"
+                            android:gravity="center_vertical"
+                            android:paddingStart="3dp"
+                            android:paddingLeft="3dp"
+                            android:text="Has the child had repeated/recurring skin problems the in last 6 months" />
+
+                        <RadioGroup
+                            android:id="@+id/rst_ped_skin_problems_in_last_six_months"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:background="@color/whiteTextColor"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <RadioButton
+                                android:id="@+id/rst_ped_skin_problems_in_last_six_months_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Yes" />
+
+                            <RadioButton
+                                android:id="@+id/rst_ped_skin_problems_in_last_six_months_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="No" />
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/textView26"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/whiteTextColor"
+                            android:gravity="center_vertical"
+                            android:paddingStart="3dp"
+                            android:paddingLeft="3dp"
+                            android:text="Has the child been in poor health or not growning as other children in the last 6 months" />
+
+                        <RadioGroup
+                            android:id="@+id/rst_ped_poor_health_in_last_six_months"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:background="@color/whiteTextColor"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <RadioButton
+                                android:id="@+id/rst_ped_poor_health_in_last_six_months_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Yes" />
+
+                            <RadioButton
+                                android:id="@+id/rst_ped_poor_health_in_last_six_months_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="No" />
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/whiteTextColor"
+                            android:gravity="center_vertical"
+                            android:paddingStart="3dp"
+                            android:paddingLeft="3dp"
+                            android:text="Does child live someone diagnosed with TB or does child currently have TB symptoms" />
+
+                        <RadioGroup
+                            android:id="@+id/rst_ped_living_with_tb_diagnosed_person_or_tb_symptoms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:background="@color/whiteTextColor"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <RadioButton
+                                android:id="@+id/rst_ped_living_with_tb_diagnosed_person_or_tb_symptoms_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Yes" />
+
+                            <RadioButton
+                                android:id="@+id/rst_ped_living_with_tb_diagnosed_person_or_tb_symptoms_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="No" />
+                        </RadioGroup>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/textView34"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/whiteTextColor"
+                            android:gravity="center_vertical"
+                            android:paddingStart="3dp"
+                            android:paddingLeft="3dp"
+                            android:text="Has child been forced to have sex against their will (without providing consent) ?" />
+
+                        <RadioGroup
+                            android:id="@+id/rst_ped_forced_sex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:background="@color/whiteTextColor"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <RadioButton
+                                android:id="@+id/rst_ped_forced_sex_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Yes" />
+
+                            <RadioButton
+                                android:id="@+id/rst_ped_forced_sex_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="No" />
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/whiteTextColor"
+                            android:gravity="center_vertical"
+                            android:paddingStart="3dp"
+                            android:paddingLeft="3dp"
+                            android:text="Has child ever anal or vaginal sex without a condom with one or more persons" />
+
+                        <RadioGroup
+                            android:id="@+id/rst_ped_ever_had_anal_or_vaginal_sex_without_condom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:background="@color/whiteTextColor"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <RadioButton
+                                android:id="@+id/rst_ped_ever_had_anal_or_vaginal_sex_without_condom_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Yes" />
+
+                            <RadioButton
+                                android:id="@+id/rst_ped_ever_had_anal_or_vaginal_sex_without_condom_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="No" />
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/textViewPedScore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/whiteTextColor"
+                            android:gravity="center_vertical|end"
+                            android:padding="3dp"
+                            android:text="Risk score" />
+
+                        <TextView
+                            android:id="@+id/rst_ped_hiv_risk_score"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="8dp"
+                            android:text="00"
+                            android:textAlignment="center"
+                            android:textColor="@color/button_text_color"
+                            android:textSize="18sp"
+                            android:textStyle="normal|bold" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rstAdult"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/rst_adult_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:padding="5dp"
+                        android:text="Adult Risk Stratification"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <FrameLayout
+                        android:id="@+id/rst_adult_icon_up"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/rst_adult_icon_down"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:padding="1dp">
+
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:id="@+id/rst_adult_text_que"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:text="After Q1, Precede Questions with 'Since your last HIV test'"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="13sp" />
+                </LinearLayout>
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
+                    android:background="@color/colorAccent">
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/whiteTextColor"
+                            android:gravity="center_vertical"
+                            android:paddingStart="3dp"
+                            android:paddingLeft="3dp"
+                            android:text="Is this HIV test based on a Clinician/Doctor's request" />
+
+                        <RadioGroup
+                            android:id="@+id/rst_adult_test_based_on_physician_request"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:background="@color/whiteTextColor"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <RadioButton
+                                android:id="@+id/rst_adult_test_based_on_physician_request_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Yes" />
+
+                            <RadioButton
+                                android:id="@+id/rst_adult_test_based_on_physician_request_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="No" />
+                        </RadioGroup>
+
+                    </TableRow>
+
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        >
+
+                        <EditText
+                            android:id="@+id/rst_adult_approx_recent_test_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="79dp"
+                            android:editable="false"
+                            android:hint="Most Recent Test Time" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.satsuware.usefulviews.LabelledSpinner
+                        android:id="@+id/rst_adult_most_recent_test_result"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/AppTheme"
+                        app:labelText="Recent Test Result"
+                        app:widgetColor="@color/colorAccent" />
+
+                </LinearLayout>
+
+                <TableLayout
+                    android:id="@+id/rst_adult"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
+                    android:background="@color/colorAccent">
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/whiteTextColor"
+                            android:gravity="center_vertical"
+                            android:paddingStart="3dp"
+                            android:paddingLeft="3dp"
+                            android:text="Ever had anal or vaginal sex without a condom with one or more persons" />
+
+                        <RadioGroup
+                            android:id="@+id/rst_adult_ever_had_anal_or_vaginal_sex_without_condom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:background="@color/whiteTextColor"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <RadioButton
+                                android:id="@+id/rst_adult_ever_had_anal_or_vaginal_sex_without_condom_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Yes" />
+
+                            <RadioButton
+                                android:id="@+id/rst_adult_ever_had_anal_or_vaginal_sex_without_condom_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="No" />
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/textViewAdult35"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/whiteTextColor"
+                            android:gravity="center_vertical"
+                            android:paddingStart="3dp"
+                            android:paddingLeft="3dp"
+                            android:text="Have you had a blood or blood product transfusion" />
+
+                        <RadioGroup
+                            android:id="@+id/rst_adult_ever_had_blood_transfusion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:background="@color/whiteTextColor"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <RadioButton
+                                android:id="@+id/rst_adult_ever_had_blood_transfusion_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Yes" />
+
+                            <RadioButton
+                                android:id="@+id/rst_adult_ever_had_blood_transfusion_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="No" />
+                        </RadioGroup>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/textViewAdult24"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/whiteTextColor"
+                            android:gravity="center_vertical"
+                            android:paddingStart="3dp"
+                            android:paddingLeft="3dp"
+                            android:text="Have you experienced painful urination, lower abdominal pain, vaginal or penile discharge, pain during sexual intercourse
+, thick, cloudy or foul smelling discharge and/or small bumps or blisters near the mouth, penis, vagina or anal area" />
+
+                        <RadioGroup
+                            android:id="@+id/rst_adult_have_sti_symptoms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:background="@color/whiteTextColor"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <RadioButton
+                                android:id="@+id/rst_adult_have_sti_symptoms_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Yes" />
+
+                            <RadioButton
+                                android:id="@+id/rst_adult_have_sti_symptoms_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="No" />
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/whiteTextColor"
+                            android:gravity="center_vertical"
+                            android:paddingStart="3dp"
+                            android:paddingLeft="3dp"
+                            android:text="Do you have any TB symptoms e.g couch, fever, unexplained weight loss or night sweats " />
+
+                        <RadioGroup
+                            android:id="@+id/rst_adult_have_tb_symptoms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:background="@color/whiteTextColor"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <RadioButton
+                                android:id="@+id/rst_adult_have_tb_symptoms_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Yes" />
+
+                            <RadioButton
+                                android:id="@+id/rst_adult_have_tb_symptoms_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="No" />
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/textViewAdult26"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/whiteTextColor"
+                            android:gravity="center_vertical"
+                            android:paddingStart="3dp"
+                            android:paddingLeft="3dp"
+                            android:text="Have you shared needles or sharp objects with someone known to be HIV+ or whose status is unknown" />
+
+                        <RadioGroup
+                            android:id="@+id/rst_adult_have_shared_sharp_objects"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:background="@color/whiteTextColor"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <RadioButton
+                                android:id="@+id/rst_adult_have_shared_sharp_objects_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Yes" />
+
+                            <RadioButton
+                                android:id="@+id/rst_adult_have_shared_sharp_objects_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="No" />
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/whiteTextColor"
+                            android:gravity="center_vertical"
+                            android:paddingStart="3dp"
+                            android:paddingLeft="3dp"
+                            android:text="Have you paid for or sold anal, oral or vaginal sex" />
+
+                        <RadioGroup
+                            android:id="@+id/rst_adult_have_paid_for_or_sold_sex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:background="@color/whiteTextColor"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <RadioButton
+                                android:id="@+id/rst_adult_have_paid_for_or_sold_sex_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Yes" />
+
+                            <RadioButton
+                                android:id="@+id/rst_adult_have_paid_for_or_sold_sex_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="No" />
+                        </RadioGroup>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/textViewAdult34"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/whiteTextColor"
+                            android:gravity="center_vertical"
+                            android:paddingStart="3dp"
+                            android:paddingLeft="3dp"
+                            android:text="Have you been forced to have sex" />
+
+                        <RadioGroup
+                            android:id="@+id/rst_adult_forced_sex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:background="@color/whiteTextColor"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <RadioButton
+                                android:id="@+id/rst_adult_forced_sex_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Yes" />
+
+                            <RadioButton
+                                android:id="@+id/rst_adult_forced_sex_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="No" />
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/textViewAdultScore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/whiteTextColor"
+                            android:gravity="center_vertical|end"
+                            android:padding="3dp"
+                            android:text="Risk score" />
+
+                        <TextView
+                            android:id="@+id/rst_adult_hiv_risk_score"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="8dp"
+                            android:text="00"
+                            android:textAlignment="center"
+                            android:textColor="@color/button_text_color"
+                            android:textSize="18sp"
+                            android:textStyle="normal|bold" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rst_risk_level_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.satsuware.usefulviews.LabelledSpinner
+                    android:id="@+id/rst_risk_level"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="How would you consider this client ?"
+                    app:widgetColor="@color/colorAccent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/rst_controls"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_risk_update_form"
+                    style="@style/login_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UPDATE" />
+
+                <Button
+                    android:id="@+id/btn_risk_save_close_form"
+                    style="@style/login_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SAVE &amp; Close" />
+
+                <Button
+                    android:id="@+id/btn_risk_save_form"
+                    style="@style/login_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SAVE &amp; CONTINUE" />
+                <!--button text changed from skip to continue-->
+                <Button
+                    android:id="@+id/btn_risk_skip_form"
+                    style="@style/login_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="CONTINUE" />
+
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

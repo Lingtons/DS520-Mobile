@@ -1,0 +1,659 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.PostTestFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.satsuware.usefulviews.LabelledSpinner
+                    android:id="@+id/referral_tested_this_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="Have you been tested for HIV before within this year"
+                    app:widgetColor="@color/colorAccent" />
+
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorAccent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/whiteTextColor"
+                        android:gravity="center_vertical"
+                        android:paddingStart="3dp"
+                        android:text="HIV Request and Result form signed by tester(s)" />
+
+                    <RadioGroup
+                        android:id="@+id/request_and_result_form_signed_by_testers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/whiteTextColor"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <RadioButton
+                            android:id="@+id/request_and_result_form_signed_by_testers_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Yes" />
+
+                        <RadioButton
+                            android:id="@+id/request_and_result_form_signed_by_testers_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="No" />
+
+                    </RadioGroup>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/whiteTextColor"
+                        android:gravity="center_vertical"
+                        android:paddingStart="3dp"
+                        android:text="HIV Request and Result form filled with CT Intake Form" />
+
+                    <RadioGroup
+                        android:id="@+id/request_and_result_form_filled_with_ct_intake_form"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/whiteTextColor"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <RadioButton
+                            android:id="@+id/request_and_result_form_filled_with_ct_intake_form_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Yes" />
+
+                        <RadioButton
+                            android:id="@+id/request_and_result_form_filled_with_ct_intake_form_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="No" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/whiteTextColor"
+                        android:gravity="center_vertical"
+                        android:paddingStart="3dp"
+                        android:text="Client received HIV test result" />
+
+                    <RadioGroup
+                        android:id="@+id/client_received_hiv_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/whiteTextColor"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <RadioButton
+                            android:id="@+id/client_received_hiv_result_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Yes" />
+
+                        <RadioButton
+                            android:id="@+id/client_received_hiv_result_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="No" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/whiteTextColor"
+                        android:gravity="center_vertical"
+                        android:paddingStart="3dp"
+                        android:text="Post test counselling done" />
+
+                    <RadioGroup
+                        android:id="@+id/post_test_councelling_done"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/whiteTextColor"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <RadioButton
+                            android:id="@+id/post_test_councelling_done_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Yes" />
+
+                        <RadioButton
+                            android:id="@+id/post_test_councelling_done_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="No" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/whiteTextColor"
+                        android:gravity="center_vertical"
+                        android:paddingStart="3dp"
+                        android:text="Risk reduction plan developed" />
+
+                    <RadioGroup
+                        android:id="@+id/risk_reduction_plan_developed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/whiteTextColor"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <RadioButton
+                            android:id="@+id/risk_reduction_plan_developed_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Yes" />
+
+                        <RadioButton
+                            android:id="@+id/risk_reduction_plan_developed_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="No" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/whiteTextColor"
+                        android:gravity="center_vertical"
+                        android:paddingStart="3dp"
+                        android:text="Post test disclosure plan developed" />
+
+                    <RadioGroup
+                        android:id="@+id/post_test_disclosure_plan_developed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/whiteTextColor"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <RadioButton
+                            android:id="@+id/post_test_disclosure_plan_developed_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Yes" />
+
+                        <RadioButton
+                            android:id="@+id/post_test_disclosure_plan_developed_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="No" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/whiteTextColor"
+                        android:gravity="center_vertical"
+                        android:paddingStart="3dp"
+                        android:text="Will bring partner(s) for HIV testing" />
+
+                    <RadioGroup
+                        android:id="@+id/will_bring_partners_for_testing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/whiteTextColor"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <RadioButton
+                            android:id="@+id/will_bring_partners_for_testing_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Yes" />
+
+                        <RadioButton
+                            android:id="@+id/will_bring_partners_for_testing_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="No" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/whiteTextColor"
+                        android:gravity="center_vertical"
+                        android:paddingStart="3dp"
+                        android:text="Will bring own children less than 5 years for HIV testing" />
+
+                    <RadioGroup
+                        android:id="@+id/will_bring_own_children_less_than_5_years_old_for_testing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/whiteTextColor"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <RadioButton
+                            android:id="@+id/will_bring_own_children_less_than_5_years_old_for_testing_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Yes" />
+
+                        <RadioButton
+                            android:id="@+id/will_bring_own_children_less_than_5_years_old_for_testing_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="No" />
+                    </RadioGroup>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/whiteTextColor"
+                        android:gravity="center_vertical"
+                        android:paddingStart="3dp"
+                        android:text="Provided with information on FP and dual contraception" />
+
+                    <RadioGroup
+                        android:id="@+id/provided_with_information_on_fp_and_dual_contraception"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/whiteTextColor"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Yes"
+                            android:id="@+id/provided_with_information_on_fp_and_dual_contraception_yes" />
+
+                        <RadioButton
+                            android:id="@+id/provided_with_information_on_fp_and_dual_contraception_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="No" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/whiteTextColor"
+                        android:gravity="center_vertical"
+                        android:paddingStart="3dp"
+                        android:text="Client/Partner use FP methods (other than condom)" />
+
+                    <RadioGroup
+                        android:id="@+id/client_or_partner_use_fp_methods"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/whiteTextColor"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <RadioButton
+                            android:id="@+id/client_or_partner_use_fp_methods_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Yes" />
+
+                        <RadioButton
+                            android:id="@+id/client_or_partner_use_fp_methods_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="No" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/whiteTextColor"
+                        android:gravity="center_vertical"
+                        android:paddingStart="3dp"
+                        android:text="Client/Partner use condom as (one) FP method" />
+
+                    <RadioGroup
+                        android:id="@+id/client_or_partner_use_condom_as_one_fp_method"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/whiteTextColor"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <RadioButton
+                            android:id="@+id/client_or_partner_use_condom_as_one_fp_method_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Yes" />
+
+                        <RadioButton
+                            android:id="@+id/client_or_partner_use_condom_as_one_fp_method_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="No" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/whiteTextColor"
+                        android:gravity="center_vertical"
+                        android:paddingStart="3dp"
+                        android:text="Correct condom use demonstrated" />
+
+                    <RadioGroup
+                        android:id="@+id/correct_condom_use_demonstrated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/whiteTextColor"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <RadioButton
+                            android:id="@+id/correct_condom_use_demonstrated_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Yes" />
+
+                        <RadioButton
+                            android:id="@+id/correct_condom_use_demonstrated_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="No" />
+                    </RadioGroup>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/whiteTextColor"
+                        android:gravity="center_vertical"
+                        android:paddingStart="3dp"
+                        android:text="Condoms provided to client" />
+
+                    <RadioGroup
+                        android:id="@+id/condoms_provided"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/whiteTextColor"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <RadioButton
+                            android:id="@+id/condoms_provided_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Yes" />
+
+                        <RadioButton
+                            android:id="@+id/condoms_provided_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="No" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/whiteTextColor"
+                        android:gravity="center_vertical"
+                        android:paddingStart="3dp"
+                        android:text="Client referred to other services" />
+
+                    <RadioGroup
+                        android:id="@+id/client_referred_to_other_services"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/whiteTextColor"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <RadioButton
+                            android:id="@+id/client_referred_to_other_services_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Yes" />
+
+                        <RadioButton
+                            android:id="@+id/client_referred_to_other_services_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="No" />
+                    </RadioGroup>
+                </TableRow>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:id="@+id/controls"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <!--<Button-->
+                    <!--android:id="@+id/update_post_test_enrol"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="UPDATE AND ENROL"-->
+                    <!--style="@style/login_button" />-->
+
+                <Button
+                    android:id="@+id/update_post_test_refer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UPDATE AND REFER"
+                    style="@style/login_button" />
+
+                <!--<Button-->
+                    <!--android:id="@+id/continue_post_test_enrol"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="CONTINUE AND ENROL"-->
+                    <!--style="@style/login_button" />-->
+
+                <Button
+                    android:id="@+id/continue_post_test_refer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="CONTINUE AND REFER"
+                    style="@style/login_button" />
+
+                <!--remove enrollment-->
+                <!--<Button-->
+                    <!--android:id="@+id/save_post_test_enroll"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="SAVE AND ENROLL"-->
+                    <!--style="@style/login_button" />-->
+
+                <Button
+                    android:id="@+id/save_post_test_refer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SAVE AND REFER"
+                    style="@style/login_button" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
